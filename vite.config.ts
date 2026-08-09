@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  
-  base: process.env.NODE_ENV === 'production' ? '/EJERCICIOS-TYPESCRIPT---REACT/' : '/',
+  // Esto le dice a GitHub dónde buscar los archivos
+  base: '/EJERCICIOS-TYPESCRIPT---REACT/',
 })
