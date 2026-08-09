@@ -16,6 +16,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "components/AreaCuadrado.tsx"],
+  "include": ["src", "components/Ejercicios.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
