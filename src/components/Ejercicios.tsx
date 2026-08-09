@@ -1,75 +1,59 @@
 import { useState } from "react";
 
 const Ejercicios = () => {
+  // EJERCICIO 1
+  function calcularAreaCuadrado(base: number, altura: number) {
+    return base * altura;
+  }
 
-  // ==========================================
-  // EJERCICIO 2: Sumar los elementos de un arreglo.
-  // Usamos un ciclo for normal (el más fácil de entender).
-  // ==========================================
+  // EJERCICIO 2
   const arregloParaSumar = [10, 20, 30, 40];
-
-  function sumarArreglo(arreglo) {
+  function sumarArreglo(arreglo: number[]) {
     let sumaTotal = 0;
-    // El for recorre el arreglo uno por uno
     for (let i = 0; i < arreglo.length; i++) {
-      // Vamos sumando cada número al total
       sumaTotal = sumaTotal + arreglo[i];
     }
     return sumaTotal;
   }
 
-  // ==========================================
-  // EJERCICIO 3: Dividir cada valor entre 5 usando .map()
-  // El profesor recomendó usar map, así que lo usamos.
-  // ==========================================
+  // EJERCICIO 3
   const arregloOriginal = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-
-  // Map recorre el arreglo y crea uno nuevo con los resultados
-  const arregloDividido = arregloOriginal.map(function(numero) {
+  const arregloDividido = arregloOriginal.map(function(numero: number) {
     return numero / 5;
   });
 
-  // ==========================================
-  // EJERCICIO 4: Arreglo de alumnos y calcular su promedio.
-  // ==========================================
+  // EJERCICIO 4
   const alumnos = [
     { name: "Viviana", edad: 19, calificacion: 10 },
     { name: "Wendy", edad: 20, calificacion: 8 },
     { name: "Gerson", edad: 18, calificacion: 9 }
   ];
-
-  function calcularPromedio(listaDeAlumnos) {
+  function calcularPromedio(listaDeAlumnos: { calificacion: number }[]) {
     let sumaNotas = 0;
-    // Usamos otro for para recorrer los objetos
     for (let i = 0; i < listaDeAlumnos.length; i++) {
-      // Sumamos solo la propiedad "calificacion" del objeto actual
       sumaNotas = sumaNotas + listaDeAlumnos[i].calificacion;
     }
-    // Para el promedio, dividimos la suma entre la cantidad de alumnos
     let promedio = sumaNotas / listaDeAlumnos.length;
     return promedio;
   }
 
-  // ==========================================
-  // EJERCICIO 5: Acumulador con useState (Empieza en 5)
-  // ==========================================
-  // useState crea una variable que React puede actualizar sin recargar la página
+  // EJERCICIO 5
   const [contador, setContador] = useState(5);
-
   function aumentarContador() {
     setContador(contador + 1);
   }
-
   function disminuirContador() {
     setContador(contador - 1);
   }
 
-  // ==========================================
-  // Esto es lo que se dibuja en el navegador (HTML)
-  // ==========================================
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>🧑‍💻 Mis ejercicios prácticos</h1>
+      <h1>Ejercicios prácticos - Aplicaciones móviles</h1>
+
+      <hr />
+      <h2>1. Área del cuadrado</h2>
+      <p>Base: 5, Altura: 5</p>
+      <p>El área es: <strong>{calcularAreaCuadrado(5, 5)}</strong></p>
 
       <hr />
       <h2>2. Suma del arreglo</h2>
@@ -94,13 +78,13 @@ const Ejercicios = () => {
       <h2>5. Acumulador (Empieza en 5)</h2>
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
         <button onClick={disminuirContador} style={{ padding: "10px 20px", fontSize: "20px", cursor: "pointer" }}>
-          ➖ Disminuir
+          - Disminuir
         </button>
         <span style={{ fontSize: "30px", fontWeight: "bold", border: "1px solid black", padding: "0 15px" }}>
           {contador}
         </span>
         <button onClick={aumentarContador} style={{ padding: "10px 20px", fontSize: "20px", cursor: "pointer" }}>
-          ➕ Aumentar
+          + Aumentar
         </button>
       </div>
     </div>
