@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <title>Redirigiendo...</title>
-    <script>
-      // Esto redirige cualquier ruta perdida hacia el index.html de React
-      var l = window.location;
-      var r = '/EJERCICIOS-TYPESCRIPT---REACT/';
-      if (l.pathname !== r) {
-        l.replace(r + '?p=' + encodeURIComponent(l.pathname));
-      }
-    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios React - App Móviles</title>
   </head>
   <body>
-    <p>Cargando la aplicación...</p>
+    <div id="root"></div>
   </body>
 </html>
