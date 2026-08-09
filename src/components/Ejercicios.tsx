@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 const Ejercicios = () => {
-  // EJERCICIO 1
+  // 1
   function calcularAreaCuadrado(base: number, altura: number) {
     return base * altura;
   }
 
-  // EJERCICIO 2
+  // 2
   const arregloParaSumar = [10, 20, 30, 40];
   function sumarArreglo(arreglo: number[]) {
     let sumaTotal = 0;
@@ -16,13 +16,13 @@ const Ejercicios = () => {
     return sumaTotal;
   }
 
-  // EJERCICIO 3
+  // 3
   const arregloOriginal = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
   const arregloDividido = arregloOriginal.map(function(numero: number) {
     return numero / 5;
   });
 
-  // EJERCICIO 4
+  // 4
   const alumnos = [
     { name: "Viviana", edad: 19, calificacion: 10 },
     { name: "Wendy", edad: 20, calificacion: 8 },
@@ -37,7 +37,7 @@ const Ejercicios = () => {
     return promedio;
   }
 
-  // EJERCICIO 5
+  // 5
   const [contador, setContador] = useState(5);
   function aumentarContador() {
     setContador(contador + 1);

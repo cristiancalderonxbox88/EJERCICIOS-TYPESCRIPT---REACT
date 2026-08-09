@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicios</title>
+    <meta charset="utf-8">
+    <title>Redirigiendo...</title>
+    <script>
+      // Esto redirige cualquier ruta perdida hacia el index.html de React
+      var l = window.location;
+      var r = '/EJERCICIOS-TYPESCRIPT---REACT/';
+      if (l.pathname !== r) {
+        l.replace(r + '?p=' + encodeURIComponent(l.pathname));
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <p>Cargando la aplicación...</p>
   </body>
 </html>
